@@ -1,3 +1,9 @@
+# Paths with sum
+"""You are given a binary tree in which each node contains an integer value (pos or neg)
+. Design algorithm to count number of paths that sum to a given value. The path does not need to start or 
+end at the root or a leaf. But must go downwards Parent to child"""
+
+
 
 
 def path(node, val=19, path =[], set_paths):
