@@ -17,13 +17,6 @@ def path(node, val=19, path =[], set_paths, count):
     # if current node has no children
         # return count
 
-        
-    # if current node == val
-        # add node to set_paths
-        # count = count + 1
-
-
-
     # if sum(path) + current node == val
         # if path not in set_paths
             # add path to set paths
