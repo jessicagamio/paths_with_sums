@@ -6,35 +6,58 @@ end at the root or a leaf. But must go downwards Parent to child"""
 
 
 
-def path(node, val=19, path =[], set_paths):
+def path(node, val=19, path =[], set_paths, count):
+    """returns number of all paths that sum upto given value"""
 
 
     # At node
     # check current node
 
-    # if current node == 19
+
+    # if current node has no children
+        # return count
+
+        
+    # if current node == val
         # add node to set_paths
+        # count = count + 1
 
 
-    # if current < 19
+
+    # if sum(path) + current node == val
+        # if path not in set_paths
+            # add path to set paths
+            # count = count + 1
+
+    # if sum(path) + current node > val
+        # failed path
+        # empty path
+        # path(cur, path, setpaths, count)
+
+    # if sum(path) + current node < va,
+        # go to next child
+
         #check left child
-        #if the sum of current node and left child < 19
+        #if the sum of current node and left child < val
             #add current to path
             # if sum of path == 19
                 # if path not in set_paths
-                # add to set_paths
+                    # add to set_paths
+                    # count = count + 1
+                    # empty path
 
 
-            #path(leftchild, path, set_paths)
+            #path(leftchild, path, set_paths, count)
 
 
         #check right child
-        # if the sum of current node and right child < 19
+        # if the sum of current node and right child < val
             # add current to path
             # if sum of path == 19
-                # add to set_paths
+                # if path not in set_paths
+                    # add to set_paths
+                    # count = count + 1
+                    # empty path
 
-            #path(leftchild, path, set_paths)
+            #path(leftchild, path, set_paths, count)
     
-        # else 
-        # return 0
