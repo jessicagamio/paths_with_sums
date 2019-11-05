@@ -27,7 +27,7 @@ tree=BinaryTree(1,
         )
 
 
-def path(node, val=19, sum_path=0):
+def path(tree, val=19, sum_path=0):
     """returns number of all paths that sum upto given value"""
 
     # DFS and preOrder traversal
@@ -44,18 +44,25 @@ def path(node, val=19, sum_path=0):
 
 
 ######################################
-    sum_path = sum_path + node.data
+    
+    if tree == None:
+        return 0
+
+    sum_path = sum_path + tree.data
 
     count = 0
 
     if sum_path == val:
         count += 1
 
-    count += path(node.left, val, sum_path)
-    count += path(node.right, val, sum_path)
+    count += path(tree.left, val, sum_path)
+    count += path(tree.right, val, sum_path)
+    print('count--->', count)
     return count
 
 
+
+print(path(tree))
 
 
 
