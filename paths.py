@@ -32,14 +32,6 @@ class BinaryTree(object):
     def __repre__(self):
         return'<BinaryTreeNode {root}}>'.format(data = self.root)
 
-tree = BinaryTree(1)
-lnewbranch = tree.insertLeft(2)
-lnewbranch.insertLeft(6)
-lnewbranch.insertRight(7)
-rnewbranch = tree.insertRight(10)
-rnewbranch.insertLeft(8)
-rnewbranch.insertRight(-1)
-
 
 def path(node, val=19, sum_path=0):
     """returns number of all paths that sum upto given value"""
