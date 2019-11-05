@@ -6,31 +6,42 @@ end at the root or a leaf. But must go downwards Parent to child"""
 
 
 class BinaryTree(object):
-    def __init__(self, root):
-        self.root = root
-        self.right = None
-        self.left = None
+    def __init__(self, data, left = None, right = None):
+        self.data = data
+        self.left = left
+        self.right = right
 
-    def insertLeft(self,newNode):
-        if self.left == None:
-            self.left = newNode
+    # def insertLeft(self,newNode):
+    #     if self.left == None:
+    #         self.left = newNode
 
-        else:
-            temp = BinaryTree(newNode)
-            temp.left = self.left
-            self.left = temp
+    #     else:
+    #         temp = BinaryTree(newNode)
+    #         temp.left = self.left
+    #         self.left = temp
 
-    def insertRight(self,newNode):
-        if self.right == None:
-            self.right = newNode
+    # def insertRight(self,newNode):
+    #     if self.right == None:
+    #         self.right = newNode
 
-        else:
-            temp = BinaryTree(newNode)
-            temp.right = self.right
-            self.right = temp
+    #     else:
+    #         temp = BinaryTree(newNode)
+    #         temp.right = self.right
+    #         self.right = temp
 
-    def __repre__(self):
-        return'<BinaryTreeNode {root}}>'.format(data = self.root)
+    def __repr__(self):
+        return'<BinaryTreeNode {data}>'.format(data = self.data)
+
+
+tree=BinaryTree(1,
+        BinaryTree(2,
+            BinaryTree(6,BinaryTree(10),BinaryTree(5)),
+            BinaryTree(7)),
+        BinaryTree(10,
+            BinaryTree(8, BinaryTree(-1),BinaryTree(-5)),
+            BinaryTree(-1, BinaryTree(2),BinaryTree(9))
+            )
+        )
 
 
 def path(node, val=19, sum_path=0):
