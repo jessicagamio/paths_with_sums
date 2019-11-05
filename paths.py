@@ -11,23 +11,6 @@ class BinaryTree(object):
         self.left = left
         self.right = right
 
-    # def insertLeft(self,newNode):
-    #     if self.left == None:
-    #         self.left = newNode
-
-    #     else:
-    #         temp = BinaryTree(newNode)
-    #         temp.left = self.left
-    #         self.left = temp
-
-    # def insertRight(self,newNode):
-    #     if self.right == None:
-    #         self.right = newNode
-
-    #     else:
-    #         temp = BinaryTree(newNode)
-    #         temp.right = self.right
-    #         self.right = temp
 
     def __repr__(self):
         return'<BinaryTreeNode {data}>'.format(data = self.data)
